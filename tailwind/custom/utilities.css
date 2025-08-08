@@ -1,0 +1,44 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `utilities` layer
+ *
+ * Add your own utility classes to this theme. Complex utility classes should
+ * be added using Tailwind’s plugin system:
+ *
+ * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
+ */
+
+.wrapper {
+    @apply w-full max-w-[1400px] mx-auto px-6;
+}
+
+.rw-button {
+    @apply block py-2 px-4 border-2 uppercase min-w-[180px] text-center;
+    text-decoration: none;
+}
+
+.rw-button__solid {
+    @apply border-[#B92025] bg-[#B92025] text-white;
+}
+
+.rw-button__trans {
+    @apply border-red-50;
+}
+
+.section-ttl {
+    @apply text-4xl mt-0 mb-4;
+}
+
+.section-divider:after {
+    background: #000;
+    background: -webkit-linear-gradient(right, transparent, #000, transparent);
+    background: -moz-linear-gradient(right, transparent, #000, transparent);
+    background: -ms-linear-gradient(right, transparent, #000, transparent);
+    background: -o-linear-gradient(right, transparent, #000, transparent);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}

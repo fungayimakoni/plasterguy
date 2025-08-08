@@ -1,0 +1,45 @@
+<?php
+// Block Name: Why Choose
+
+$id = 'why-choose-' . $block['id'];
+$align_class = $block['align'] ? 'align' . $block['align'] : '';
+
+?>
+
+<section id="<?php echo $id; ?>" class="py-20" style="background-image: url('<?php the_field('wc_background_image'); ?>')">
+    <div class="wrapper">
+        <div class="flex md:flex-row flex-col">
+            <div class="text-white">
+                <h2 class="section-ttl text-white"><?php the_field('wc_title'); ?></h2>
+                <p class="mb-6 text-xl"><?php the_field('wc_description'); ?></p>
+            </div>
+
+            <?php if (have_rows('wc_items')): ?>
+                <div class="grid grid-cols-2 gap-6">
+                    <?php while (have_rows('wc_items')): the_row();
+                        $image = get_sub_field('icon');
+                        $title = get_sub_field('item_title');
+                        $description = get_sub_field('item_description');
+                        $link = get_sub_field('s_cta');
+                    ?>
+                        <div class="service-card bg-[#F3F0EB] flex flex-col p-8">
+                            <img class="mt-0 mb-4" width="40" height="40" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <div class="flex-1 flex flex-col items-start">
+                                <h3 class="mt-0 text-2xl"><?php echo $title; ?></h3>
+                                <div class="mb-4"><?php echo $description; ?></div>
+                                <?php
+                                if ($link):
+                                    $link_url = $link['url'];
+                                    $link_title = $link['title'];
+                                    $link_target = $link['target'] ? $link['target'] : '_self';
+                                ?>
+                                    <a class="inline-block border border-black py-2 px-4 mt-auto" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
