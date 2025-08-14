@@ -78,6 +78,36 @@ function rwb_define_block()
             'icon' => 'heading',
             'keywords' => array('full', 'copy', 'acf'),
         ));
+
+        acf_register_block(array(
+            'name' => 'faqs',
+            'title' => __('Frequently Asked Questions'),
+            'description' => __('Section with faqs'),
+            'render_callback' => 'rwb_render_faqs_block',
+            'category' => 'layout',
+            'icon' => 'heading',
+            'keywords' => array('faqs', 'questions', 'acf'),
+        ));
+
+        acf_register_block(array(
+            'name' => 'testimonials',
+            'title' => __('Testimonials'),
+            'description' => __('Section with testimonials'),
+            'render_callback' => 'rwb_render_testimonials_block',
+            'category' => 'layout',
+            'icon' => 'heading',
+            'keywords' => array('testimonials', 'acf'),
+        ));
+
+        acf_register_block(array(
+            'name' => 'posts-listing',
+            'title' => __('Posts listing'),
+            'description' => __('Custom posts listing'),
+            'render_callback' => 'rwb_render_posts_listing_block',
+            'category' => 'layout',
+            'icon' => 'heading',
+            'keywords' => array('posts', 'acf'),
+        ));
     }
 }
 
@@ -142,6 +172,36 @@ function rwb_render_operational_areas_block($block)
 }
 
 function rwb_render_fullbleed_copy_block($block)
+{
+    $slug = str_replace('acf/', '', $block['name']);
+
+    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+
+        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+    }
+}
+
+function rwb_render_faqs_block($block)
+{
+    $slug = str_replace('acf/', '', $block['name']);
+
+    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+
+        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+    }
+}
+
+function rwb_render_testimonials_block($block)
+{
+    $slug = str_replace('acf/', '', $block['name']);
+
+    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+
+        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+    }
+}
+
+function rwb_render_posts_listing_block($block)
 {
     $slug = str_replace('acf/', '', $block['name']);
 
