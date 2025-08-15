@@ -24,6 +24,8 @@
 	--color-tertiary: var(--wp--preset--color--tertiary);
 	--container-content: var(--wp--style--global--content-size);
 	--container-wide: var(--wp--style--global--wide-size);
+	--color-beige: #f3f0eb;
+	--color-yellow: #F9A825;
 
 	/**
 	 * These are the default `font-family` theme variables included with

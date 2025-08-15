@@ -21,9 +21,9 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
         <div class="w-1/2 max-w-[640px] flex flex-col justify-center pl-12">
             <h1 class="text-5xl"><?php the_field('heading_title'); ?></h1>
-            <h2 class="mt-0"><?php the_field('sub_heading'); ?></h2>
+            <h2 class="mt-0 mb-0"><?php the_field('sub_heading'); ?></h2>
 
-            <?php the_field('hero_description'); ?>
+            <div class="description text-xl"><?php the_field('hero_description'); ?></div>
 
             <div class="flex gap-2">
                 <?php

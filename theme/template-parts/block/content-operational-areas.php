@@ -6,7 +6,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
 
-<section id="<?php echo $id; ?>" class="py-20">
+<section id="<?php echo $id; ?>" class="pb-20">
     <div class="wrapper">
         <div class="grid grid-cols-3 gap-6 bg-black p-12">
             <div class="intro">
@@ -30,13 +30,13 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                 <?php endif; ?>
             </div>
             <div class="locations-list">
-                <h3 class="font-bold mt-0 mb-4 text-white"><?php the_field('areas_title'); ?></h3>
+                <h3 class="font-bold mt-0 mb-4 text-white text-2xl"><?php the_field('areas_title'); ?></h3>
                 <?php if (have_rows('areas_listing')): ?>
                     <div class="grid grid-cols-2 gap-2">
                         <?php while (have_rows('areas_listing')): the_row();
                             $area_name = get_sub_field('area_name');
                         ?>
-                            <p class="mb-0 mt-0 text-white"><?php echo $area_name; ?></p>
+                            <p class="mb-0 mt-0 text-white text-xl"><?php echo $area_name; ?></p>
                         <?php endwhile; ?>
                     </div>
                 <?php endif; ?>

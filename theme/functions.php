@@ -165,10 +165,11 @@ add_action('widgets_init', 'rwb_widgets_init');
  */
 function rwb_scripts()
 {
+	wp_enqueue_style('rwb-swipercss', get_template_directory_uri() . '/assets/swiper.min.css', array(), RWB_VERSION);
+	wp_enqueue_style('rwb-aoscss', get_template_directory_uri() . '/assets/css/aos.css', array(), RWB_VERSION);
 	wp_enqueue_style('rwb-style', get_stylesheet_uri(), array(), RWB_VERSION);
-	wp_enqueue_style('rwb-swipercss', get_template_directory_uri() . '/assets/swiper.min.css', array(), RWB_VERSION, true);
 	wp_enqueue_script('rwb-jquery', get_template_directory_uri() . '/assets/jquery.min.js');
-
+	wp_enqueue_script('rwb-aosjs', get_template_directory_uri() . '/assets/js/aos.js', array(), RWB_VERSION, true);
 	wp_enqueue_script('rwb-swiperjs', get_template_directory_uri() . '/assets/swiper.min.js', array(), RWB_VERSION, true);
 	wp_enqueue_script('rwb-script', get_template_directory_uri() . '/js/script.min.js', array(), RWB_VERSION, true);
 

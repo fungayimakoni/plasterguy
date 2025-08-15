@@ -17,7 +17,7 @@
 }
 
 .rw-button__solid {
-    @apply border-[#B92025] bg-[#B92025] text-white;
+    @apply border-yellow bg-yellow text-white font-semibold;
 }
 
 .rw-button__trans {

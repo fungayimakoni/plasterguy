@@ -23,9 +23,11 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                     $title = get_sub_field('title');
                     $image = get_sub_field('icon');
                 ?>
-                    <div class="">
+                    <div class="flex flex-col items-center">
                         <?php if (!empty($image)): ?>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="60" height="60" />
+                            <div class="shadow-xl rounded-full w-[120px] h-[120px] flex items-center justify-center">
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="80" height="80" />
+                            </div>
                         <?php endif; ?>
                         <p><?php echo $title; ?></p>
                     </div>
@@ -35,18 +37,3 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
     </div>
 </section>
-
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-    </div>
-    <div class="swiper-pagination"></div>
-</div>

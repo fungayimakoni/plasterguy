@@ -33,7 +33,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                     $title = get_sub_field('step_title');
                     $step_description = get_sub_field('step_description');
                 ?>
-                    <div class="border p-12">
+                    <div class="p-12 bg-beige">
                         <span class="font-bold text-6xl text-gray-400">0<?php echo get_row_index(); ?></span>
                         <h3 class="mt-4 text-2xl"><?php echo $title; ?></h3>
                         <?php echo $step_description; ?>

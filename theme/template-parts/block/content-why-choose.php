@@ -15,7 +15,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
             </div>
 
             <?php if (have_rows('wc_items')): ?>
-                <div class="grid grid-cols-2 gap-6">
+                <div class="grid grid-cols-2 gap-6 -mt-28">
                     <?php while (have_rows('wc_items')): the_row();
                         $image = get_sub_field('icon');
                         $title = get_sub_field('item_title');
@@ -23,7 +23,13 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                         $link = get_sub_field('s_cta');
                     ?>
                         <div class="service-card bg-[#F3F0EB] flex flex-col p-8">
-                            <img class="mt-0 mb-4" width="40" height="40" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <!-- <img class="mt-0 mb-4" width="40" height="40" src="<?php //echo esc_url($image['url']); 
+                                                                                    ?>" alt="<?php //echo esc_attr($image['alt']); 
+                                                                                                                                    ?>" /> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24">
+                                <path d="M7 13.689l.637-.636 2.863 2.674 7.022-6.87.637.637L10.5 17zM22.8 12.5A10.3 10.3 0 1 1 12.5 2.2a10.297 10.297 0 0 1 10.3 10.3zm-1 0a9.3 9.3 0 1 0-9.3 9.3 9.31 9.31 0 0 0 9.3-9.3z"></path>
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                            </svg>
                             <div class="flex-1 flex flex-col items-start">
                                 <h3 class="mt-0 text-2xl"><?php echo $title; ?></h3>
                                 <div class="mb-4"><?php echo $description; ?></div>
