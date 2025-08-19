@@ -8,17 +8,17 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 <section id="<?php echo $id; ?>" class="py-20 section-divider relative">
     <div class="wrapper">
-        <div class="flex gap-8">
-            <div class="ttle w-[35%]">
+        <div class="flex gap-8 md:flex-row flex-col">
+            <div class="ttle md:w-[35%]">
                 <h2 class="section-ttl"><?php the_field('fb_title'); ?></h2>
             </div>
-            <div class="copy w-[65%] text-xl -mt-6">
+            <div class="copy md:w-[65%] text-xl -mt-6">
                 <?php the_field('fb_description'); ?>
             </div>
         </div>
 
         <?php if (have_rows('icon_listing')): ?>
-            <div class="grid grid-cols-4 max-w-[1000px] mx-auto mt-8">
+            <div class="hidden md:grid grid-cols-4 max-w-[1000px] mx-auto mt-8">
                 <?php while (have_rows('icon_listing')): the_row();
                     $title = get_sub_field('title');
                     $image = get_sub_field('icon');

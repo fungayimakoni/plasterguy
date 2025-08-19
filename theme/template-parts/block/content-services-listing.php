@@ -9,12 +9,12 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 <section id="<?php echo $id; ?>" class="pb-32">
     <?php if (have_rows('services_list')): ?>
         <div class="flexx gap-6 mt-12">
-            <div class="wrapper flex items-center justify-between gap-4 mb-8">
+            <div class="wrapper flex md:items-center justify-between md:flex-row flex-col gap-4 mb-8">
                 <h2 class="section-ttl"><?php the_field('section_title'); ?></h2>
                 <div class="slick-nav-wrapper flex gap-4"></div>
             </div>
 
-            <div class="autoplay">
+            <div class="autoplay pl-6">
                 <?php while (have_rows('services_list')): the_row();
                     $image = get_sub_field('s_image');
                     $title = get_sub_field('s_title');
@@ -22,7 +22,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                     $link = get_sub_field('s_cta');
                 ?>
                     <div class="service-card bg-[#F3F0EB]">
-                        <div class="flex flex-col h-full">
+                        <div class="">
                             <img class="mt-0 mb-0" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 
                             <div class="p-8 flex-1 flex flex-col items-start">

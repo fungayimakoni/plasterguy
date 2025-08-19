@@ -8,7 +8,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 <section id="<?php echo $id; ?>" class="pb-20">
     <div class="wrapper">
-        <div class="grid grid-cols-3 gap-6 bg-black p-12">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-6 bg-black p-12">
             <div class="intro">
                 <h2 class="section-ttl text-white"><?php the_field('oa_title'); ?></h2>
                 <p class="text-white text-xl"><?php the_field('oa_description'); ?></p>
@@ -32,7 +32,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
             <div class="locations-list">
                 <h3 class="font-bold mt-0 mb-4 text-white text-2xl"><?php the_field('areas_title'); ?></h3>
                 <?php if (have_rows('areas_listing')): ?>
-                    <div class="grid grid-cols-2 gap-2">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-2">
                         <?php while (have_rows('areas_listing')): the_row();
                             $area_name = get_sub_field('area_name');
                         ?>

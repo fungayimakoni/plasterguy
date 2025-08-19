@@ -33,7 +33,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 <section id="<?php echo $id; ?>" class="pb-32">
     <div class="wrapper">
-        <div class="grid grid-cols-4">
+        <div class="md:grid grid-cols-4 flex flex-col-reverse gap-y-6">
             <div class="flex gap-6 flex-col">
                 <a href="https://www.google.com/search?q=theplasterguy&rlz=1C1JJTC_enZA1148ZA1148&oq=theplasterguy&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDwyCggCEAAYogQYiQUyBwgDEAAY7wUyCggEEAAYgAQYogQyCggFEAAYgAQYogQyBggGEEUYPNIBCDQ5NzFqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8#" class="no-underline !text-[#404040]">
                     <!-- <svg aria-hidden="true" focusable="false" data-prefix="fass" data-icon="star-sharp" class="svg-inline--fa fa-star-sharp sc-d585af5e-1 kpKuOC" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" color="#5E257A" width="1rem" fill="currentColor" style="width: 1rem; height: 1rem;">
@@ -58,8 +58,8 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
             </div>
             <div class="testimonials-wrapper col-span-3">
                 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
-                    <div class="flex items-center justify-between gap-4 mb-2">
-                        <div class="pl-[25px]">
+                    <div class="flex md:items-center items-end justify-between gap-4 mb-2">
+                        <div class="md:pl-[25px]">
                             <?php if (get_field('tstls_title')): ?>
                                 <h2 class="section-ttl"><?php the_field('tstls_title'); ?></h2>
                             <?php endif; ?>

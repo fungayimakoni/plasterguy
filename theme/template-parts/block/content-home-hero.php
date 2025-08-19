@@ -7,8 +7,8 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 ?>
 
 <section id="<?php echo $id; ?>" class="bg-[#F9EEDD]">
-    <div class="flex gap-4">
-        <div class="w-1/2 overflow-hidden">
+    <div class="flex gap-4 md:flex-row flex-col">
+        <div class="md:w-1/2 overflow-hidden">
             <?php
             $image = get_field('background_image');
             $size = 'full';
@@ -19,7 +19,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
             ?>
         </div>
 
-        <div class="w-1/2 max-w-[640px] flex flex-col justify-center pl-12">
+        <div class="md:w-1/2 max-w-[640px] flex flex-col justify-center pl-12">
             <h1 class="text-5xl"><?php the_field('heading_title'); ?></h1>
             <h2 class="mt-0 mb-0"><?php the_field('sub_heading'); ?></h2>
 

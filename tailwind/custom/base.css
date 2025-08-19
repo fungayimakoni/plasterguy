@@ -10,20 +10,13 @@ body {
 	@apply bg-background text-foreground font-sans;
 }
 
-.slick-track {
-	display: flex;
-	gap: 25px;
-}
-
-.slick-track {
-	display: flex;
-}
 
 .slick-slide {
-	display: flex;
-	height: auto;
-	align-items: center;
-	justify-content: center;
+	margin: 0 10px;
+}
+
+.slick-list {
+	margin: 0 -10px;
 }
 
 button.slick-arrow.slick-disabled {

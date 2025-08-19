@@ -15,12 +15,12 @@
 		<div class="flex justify-between items-center">
 			<div class="w-1/3">
 				<nav id="site-navigation" aria-label="<?php esc_attr_e('Main Navigation', 'rwb'); ?>">
-					<button class="hidden" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'rwb'); ?></button>
+					<button class="md:hidden menu-hamburger" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'rwb'); ?></button>
 
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'menu-1',
-						'menu_class'     => 'main-menu flex gap-4 uppercase font-bold', // <- your custom ul classes
+						'menu_class'     => 'main-menu md:flex hidden gap-4 uppercase font-bold', // <- your custom ul classes
 						'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
 					));
 					?>

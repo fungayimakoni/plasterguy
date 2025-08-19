@@ -26,38 +26,39 @@
         });
 
 
-
         $('.autoplay').slick({
-            centerPadding: '60px',
             slidesToShow: 3.2,
+            slidesToScroll: 1,
             infinite: false,
             appendArrows: '.slick-nav-wrapper',
             prevArrow: '<button type="button" class="slick-prev p-2 rounded-full border border-gray-400 w-[46px] text-gray-400 cursor-pointer" aria-label="Previous slide">&larr;</button>',
             nextArrow: '<button type="button" class="slick-next p-2 rounded-full border border-gray-400 w-[46px] text-gray-400 cursor-pointer" aria-label="Next slide">&rarr;</button>',
             responsive: [
                 {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2.2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
                     breakpoint: 768,
                     settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
+                        slidesToShow: 1.3,
+                        slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
+                        slidesToShow: 1.2,
+                        slidesToScroll: 1
                     }
                 }
             ]
         });
 
         $('.testimonials-wrapper .testimonials-slider').slick({
-            // centerPadding: '60px',
             slidesToShow: 3,
             infinite: false,
             appendArrows: '.testimonials-nav-wrapper',
@@ -65,21 +66,24 @@
             nextArrow: '<button type="button" class="slick-next p-2 rounded-full border border-gray-400 w-[46px] text-gray-400 cursor-pointer" aria-label="Next slide">&rarr;</button>',
             responsive: [
                 {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
                     breakpoint: 768,
                     settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 }
             ]

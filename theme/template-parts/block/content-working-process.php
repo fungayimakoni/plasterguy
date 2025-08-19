@@ -21,7 +21,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
             $link_target = $link['target'] ? $link['target'] : '_self';
         endif; ?>
 
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
             <div class="flex flex-col justify-center items-start">
                 <h2 class="section-ttl mb-4"><?php echo $s_title; ?></h2>
                 <p class="mb-6 text-xl"><?php echo $s_description; ?></p>
