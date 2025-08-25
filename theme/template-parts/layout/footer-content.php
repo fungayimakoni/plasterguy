@@ -10,6 +10,8 @@
 
 ?>
 
+<button class="scrollToTopBtn">☝️</button>
+
 <footer id="colophon" class="mt-auto bg-[#F9EEDD] py-6">
 	<div class="wrapper">
 		<div class="flex border-b pb-6">

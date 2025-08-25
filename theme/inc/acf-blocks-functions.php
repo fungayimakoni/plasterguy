@@ -35,7 +35,7 @@ function rwb_define_block()
             'description' => __('A custom services listing'),
             'render_callback' => 'rwb_render_services_listing_block',
             'category' => 'layout',
-            'icon' => 'heading',
+            'icon' => 'tools',
             'keywords' => array('services', 'acf'),
         ));
 
@@ -65,7 +65,7 @@ function rwb_define_block()
             'description' => __('Areas we serve'),
             'render_callback' => 'rwb_render_operational_areas_block',
             'category' => 'layout',
-            'icon' => 'heading',
+            'icon' => 'dashboard',
             'keywords' => array('operational', 'areas', 'locations', 'acf'),
         ));
 
@@ -85,7 +85,7 @@ function rwb_define_block()
             'description' => __('Section with faqs'),
             'render_callback' => 'rwb_render_faqs_block',
             'category' => 'layout',
-            'icon' => 'heading',
+            'icon' => 'search',
             'keywords' => array('faqs', 'questions', 'acf'),
         ));
 
@@ -95,7 +95,7 @@ function rwb_define_block()
             'description' => __('Section with testimonials'),
             'render_callback' => 'rwb_render_testimonials_block',
             'category' => 'layout',
-            'icon' => 'heading',
+            'icon' => 'quote',
             'keywords' => array('testimonials', 'acf'),
         ));
 
@@ -105,7 +105,7 @@ function rwb_define_block()
             'description' => __('Custom posts listing'),
             'render_callback' => 'rwb_render_posts_listing_block',
             'category' => 'layout',
-            'icon' => 'heading',
+            'icon' => 'post',
             'keywords' => array('posts', 'acf'),
         ));
     }
