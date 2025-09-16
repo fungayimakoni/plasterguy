@@ -196,7 +196,7 @@ if ( ! function_exists( 'rwb_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<figure>
+			<figure class="max-w-[980px] mx-auto">
 				<?php the_post_thumbnail(); ?>
 			</figure><!-- .post-thumbnail -->
 

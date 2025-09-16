@@ -12,7 +12,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
             <div class="ttle md:w-[35%]">
                 <h2 class="section-ttl"><?php the_field('fb_title'); ?></h2>
             </div>
-            <div class="copy md:w-[65%] text-xl -mt-6">
+            <div class="copy md:w-[65%] -mt-6">
                 <?php the_field('fb_description'); ?>
             </div>
         </div>

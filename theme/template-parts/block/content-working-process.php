@@ -24,7 +24,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
         <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
             <div class="flex flex-col justify-center items-start">
                 <h2 class="section-ttl mb-4"><?php echo $s_title; ?></h2>
-                <p class="mb-6 text-xl"><?php echo $s_description; ?></p>
+                <p class="mb-6"><?php echo $s_description; ?></p>
                 <a class="rw-button rw-button__solid !inline-block" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
             </div>
 

@@ -24,6 +24,44 @@
             "append": ""
         },
         {
+            "key": "field_68c0357fc4874",
+            "label": "Section Description",
+            "name": "slsection_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_68c03596b9f19",
+            "label": "Section CTA",
+            "name": "slsection_cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_68936107d743a",
             "label": "Services",
             "name": "services_list",
@@ -99,7 +137,7 @@
                     "label": "Description",
                     "name": "s_description",
                     "aria-label": "",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -109,11 +147,11 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
                     "parent_repeater": "field_68936107d743a"
                 },
                 {
@@ -142,7 +180,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/services-listing"
+                "value": "acf\/services"
             }
         ]
     ],
@@ -155,5 +193,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754489470
+    "modified": 1757427123
 }

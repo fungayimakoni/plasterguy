@@ -40,7 +40,7 @@ if (! defined('RWB_TYPOGRAPHY_CLASSES')) {
 	 */
 	define(
 		'RWB_TYPOGRAPHY_CLASSES',
-		'prose prose-neutral max-w-none prose-a:text-primary'
+		'prosex prose-neutral max-w-none prose-a:text-primary'
 	);
 }
 
@@ -165,13 +165,15 @@ add_action('widgets_init', 'rwb_widgets_init');
  */
 function rwb_scripts()
 {
-	wp_enqueue_style('rwb-swipercss', get_template_directory_uri() . '/assets/swiper.min.css', array(), RWB_VERSION);
+	wp_enqueue_style('rwb-swipercss', get_template_directory_uri() . '/assets/css/swiper.min.css', array(), RWB_VERSION);
 	wp_enqueue_style('rwb-aoscss', get_template_directory_uri() . '/assets/css/aos.css', array(), RWB_VERSION);
 	wp_enqueue_style('rwb-style', get_stylesheet_uri(), array(), RWB_VERSION);
-	wp_enqueue_script('rwb-jquery', get_template_directory_uri() . '/assets/jquery.min.js');
+	
 	wp_enqueue_script('rwb-aosjs', get_template_directory_uri() . '/assets/js/aos.js', array(), RWB_VERSION, true);
-	wp_enqueue_script('rwb-swiperjs', get_template_directory_uri() . '/assets/swiper.min.js', array(), RWB_VERSION, true);
+	wp_enqueue_script('rwb-swiperjs', get_template_directory_uri() . '/assets/js/swiper.min.js', array(), RWB_VERSION, true);
 	wp_enqueue_script('rwb-script', get_template_directory_uri() . '/js/script.min.js', array(), RWB_VERSION, true);
+	wp_enqueue_script('rwb-jquery', get_template_directory_uri() . '/assets/jquery.min.js');
+
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -253,3 +255,15 @@ require get_template_directory() . '/inc/template-functions.php';
 * ACF Blocks Functionality 
 */
 require get_template_directory() . '/inc/acf-blocks-functions.php';
+
+// register_block_type( dirname(__FILE__) . '/block.json' );
+
+// get an array of all of the block.json files in my blocks directory
+$block_json_files = glob( get_template_directory() . '/blocks/**/block.json' );
+
+// auto register all blocks that were found.
+foreach( $block_json_files as $block_json_file ){
+
+	register_block_type( $block_json_file );
+
+}

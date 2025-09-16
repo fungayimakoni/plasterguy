@@ -1,0 +1,27 @@
+{
+    "apiVersion": 2,
+    "name": "acf/reasons-block",
+    "title": "Why Choose Us",
+    "category": "widgets",
+    "icon": "settings",
+    "description": "A custom why choose us block",
+    "keywords": [
+        "why",
+        "choose"
+    ],
+    "supports": {
+        "color": true,
+        "align": true,
+        "anchor": true,
+        "jsx": true,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "style": "file:./style.css"
+}

@@ -1,0 +1,27 @@
+{
+    "apiVersion": 2,
+    "name": "acf/operational-areas",
+    "title": "Operational Areas Block",
+    "category": "widgets",
+    "icon": "dashboard",
+    "description": "A custom operational areas block",
+    "keywords": [
+        "operational",
+        "areas"
+    ],
+    "supports": {
+        "color": true,
+        "align": true,
+        "anchor": true,
+        "jsx": true,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "style": "file:./style.css"
+}

@@ -10,7 +10,7 @@
 
 ?>
 
-<header id="masthead" class="fixed top-0 left-0 z-999 w-full transition-all transition-discrete ">
+<header id="masthead" class="fixedx top-0 left-0 z-999 w-full transition-all transition-discrete">
 	<div class="wrapper">
 		<div class="flex justify-between items-center">
 			<div class="w-1/3">
@@ -20,7 +20,7 @@
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'menu-1',
-						'menu_class'     => 'main-menu md:flex hidden gap-4 uppercase font-bold', // <- your custom ul classes
+						'menu_class'     => 'main-menu md:flex hidden gap-4 text-lg', // <- your custom ul classes
 						'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
 					));
 					?>

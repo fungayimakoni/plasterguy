@@ -1,0 +1,27 @@
+{
+    "apiVersion": 2,
+    "name": "acf/two-column",
+    "title": "Two Column",
+    "category": "widgets",
+    "icon": "admin-comments",
+    "description": "A custom two column block with ACF fields.",
+    "keywords": [
+        "two column",
+        "quotex"
+    ],
+    "supports": {
+        "color": true,
+        "align": true,
+        "anchor": true,
+        "jsx": true,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "style": "file:./two-column.css"
+}

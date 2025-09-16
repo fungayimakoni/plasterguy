@@ -64,7 +64,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                                 <h2 class="section-ttl"><?php the_field('tstls_title'); ?></h2>
                             <?php endif; ?>
                             <?php if (get_field('tstls_description')): ?>
-                                <p class="text-xl"><?php the_field('tstls_description'); ?></p>
+                                <p><?php the_field('tstls_description'); ?></p>
                             <?php endif; ?>
                         </div>
                         <div class="testimonials-nav-wrapper flex gap-4"></div>

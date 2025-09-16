@@ -116,6 +116,23 @@
                     "parent_repeater": "field_6895f16b6435f"
                 }
             ]
+        },
+        {
+            "key": "field_68c419a37796c",
+            "label": "Section CTA",
+            "name": "fbsection_cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -123,7 +140,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/fullbleed-copy"
+                "value": "acf\/full-bleed"
             }
         ]
     ],
@@ -136,5 +153,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754657546
+    "modified": 1757682132
 }

@@ -11,7 +11,7 @@
 				},
 				{
 					"slug": "foreground",
-					"color": "#404040",
+					"color": "#042042",
 					"name": "Foreground"
 				},
 				{
@@ -30,6 +30,10 @@
 					"name": "Tertiary"
 				}
 			]
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
 		},
 		"layout": {
 			"contentSize": "100%",

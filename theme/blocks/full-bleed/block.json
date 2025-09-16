@@ -1,0 +1,27 @@
+{
+    "apiVersion": 2,
+    "name": "acf/full-bleed",
+    "title": "Full Width Block",
+    "category": "layouts",
+    "icon": "heading",
+    "description": "A custom full width block",
+    "keywords": [
+        "full",
+        "bleed"
+    ],
+    "supports": {
+        "color": true,
+        "align": true,
+        "anchor": true,
+        "jsx": true,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "style": "file:./style.css"
+}

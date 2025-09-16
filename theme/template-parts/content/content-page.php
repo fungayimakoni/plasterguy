@@ -11,19 +11,38 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<!-- <header class="entry-header"> -->
 	<?php
-	// if ( ! is_front_page() ) {
-	// 	the_title( '<h1 class="entry-title">', '</h1>' );
-	// } else {
-	// 	the_title( '<h2 class="entry-title">', '</h2>' );
-	// }
-	?>
-	<!-- </header> -->
+	if ( ! is_front_page() ) : ?>
+		<header class="entry-header rounded-bl-[60px] ml-8 bg-[#08253A]">
+			<div class="md:flex items-center relative md:min-h-[400px]">
+
+				<div class="md:w-2/3 absolute left-0 top-0">
+					
+				</div>
+				
+				<div class="md:w-1/3 md:absolute right-0 top-0 bg-[#007ac2] h-full">
+						<?php the_post_thumbnail('full', array('class' => 'h-full object-cover md:absolute left-0 top-0')); ?>
+				</div>
+
+				<div class="wrapper">
+					<div class="max-w-2/3 mr-auto">
+						<div class="py-8">
+							<?php the_title( '<h1 class="entry-title text-white md:text-[50px] text-[40px] mb-2">', '</h1>' ); ?>
+							
+							<?php if( get_field( 'page_heading_intro' ) ): ?>
+								<p class="text-white md:text-2xl"><?php the_field( 'page_heading_intro' ); ?></p>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</header>
+	<?php endif; ?>
 	<!-- .entry-header -->
 
-	<?php rwb_post_thumbnail(); ?>
+
+	
 
 	<div <?php rwb_content_class('entry-content'); ?>>
 		<?php

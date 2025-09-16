@@ -12,6 +12,64 @@
 (function ($) {
     // 'use strict';
     $(document).ready(function () {
+
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            loop: true,
+            effect: "fade",
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });
+
+        var lbswiper = new Swiper(".lg-blocks", {
+            slidesPerView: 1,
+            direction: 'horizontal',
+            loop: false,
+            grabCursor: true,
+            spaceBetween: 40,
+            freeMode: true,
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false
+            // },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                // hide: true,
+                draggable: true,
+                // dragSize: 50
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.3,
+                },
+                768: {
+                    slidesPerView: 2,
+                }
+            }
+        });
+
         $(window).scroll(function () {
             var masthead = $("header#masthead");
             var customLogoLink = $(".custom-logo-link img");
@@ -23,70 +81,6 @@
                 masthead.removeClass("bg-white");
                 customLogoLink.removeClass("max-w-[200px]");
             }
-        });
-
-
-        $('.autoplay').slick({
-            slidesToShow: 3.2,
-            slidesToScroll: 1,
-            infinite: false,
-            appendArrows: '.slick-nav-wrapper',
-            prevArrow: '<button type="button" class="slick-prev p-2 rounded-full border border-gray-400 w-[46px] text-gray-400 cursor-pointer" aria-label="Previous slide">&larr;</button>',
-            nextArrow: '<button type="button" class="slick-next p-2 rounded-full border border-gray-400 w-[46px] text-gray-400 cursor-pointer" aria-label="Next slide">&rarr;</button>',
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2.2,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1.3,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1.2,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-        $('.testimonials-wrapper .testimonials-slider').slick({
-            slidesToShow: 3,
-            infinite: false,
-            appendArrows: '.testimonials-nav-wrapper',
-            prevArrow: '<button type="button" class="slick-prev p-2 rounded-full border border-gray-400 w-[46px] text-gray-400 cursor-pointer" aria-label="Previous slide">&larr;</button>',
-            nextArrow: '<button type="button" class="slick-next p-2 rounded-full border border-gray-400 w-[46px] text-gray-400 cursor-pointer" aria-label="Next slide">&rarr;</button>',
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 3,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
         });
 
         // below listed default settings

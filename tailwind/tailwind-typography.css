@@ -10,3 +10,13 @@
 
 @plugin "@_tw/typography";
 @config "./tailwind-typography.config.js";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Tajawal';
+    margin-bottom: 20px;
+}

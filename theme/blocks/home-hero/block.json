@@ -1,0 +1,22 @@
+{
+    "apiVersion": 2,
+    "name": "acf/home-hero",
+    "title": "Home Main Hero",
+    "category": "layouts",
+    "icon": "heading",
+    "description": "A custom home page hero block",
+    "keywords": [
+        "home",
+        "hero"
+    ],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "jsx": true
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "style": "file:./two-column.css"
+}

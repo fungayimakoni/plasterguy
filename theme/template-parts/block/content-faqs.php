@@ -37,7 +37,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                     <?php while (have_rows('faqs_listing')) : the_row(); ?>
                         <div class="faq-item border-b border-gray-400 pb-4 mb-4">
                             <div class="faq-question relative flex flex-between align-baseline justify-between">
-                                <h5 class="font-semibold text-xl flex justify-center items-center"><?php the_sub_field('question'); ?></h5>
+                                <h5 class="font-semibold flex justify-center items-center"><?php the_sub_field('question'); ?></h5>
                             </div>
                             <div class="faq-answer">
                                 <div class="expander-content">

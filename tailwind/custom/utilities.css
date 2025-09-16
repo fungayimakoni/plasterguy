@@ -8,32 +8,63 @@
  */
 
 .wrapper {
-    @apply w-full max-w-[1400px] mx-auto px-6;
+    @apply w-full max-w-[1440px] mx-auto px-6;
+}
+
+.section-padding {
+    @apply md:py-20 py-12;
 }
 
 .rw-button {
-    @apply block py-2 px-4 border-2 uppercase min-w-[180px] text-center;
+    @apply block py-3 px-4 relative text-white font-bold min-w-[180px] text-center rounded-full bg-linear-to-r from-[#EE322E] to-[#F79431] mt-3 transition-discrete;
     text-decoration: none;
 }
 
+.rw-button:hover {
+    @apply bg-linear-to-r from-[#EE322E] to-[#EE322E];
+}
+
 .rw-button__solid {
-    @apply border-yellow bg-yellow text-white font-semibold;
+    @apply !border-2 border-white font-semibold;
 }
 
 .rw-button__trans {
     @apply border-red-50;
 }
 
-.section-ttl {
-    @apply text-4xl mt-0 mb-4;
+.rw-button,
+.rw-button:after {
+    -webkit-transition: var(--transition);
+    transition: var(--transition)
 }
+
+.rw-button:after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12.6 7.7' style='enable-background:new 0 0 12.6 7.7' xml:space='preserve'%3E%3Cpath d='m.7.7 5.6 5.6L11.9.7' style='fill:none;stroke:%23fff;stroke-width:2'/%3E%3C/svg%3E");
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 1rem
+}
+
+.rw-button:hover {
+    padding-right: 1.5rem;
+}
+
+.rw-button:hover:after {
+    opacity: 1
+}
+
 
 .section-divider:after {
     background: #000;
-    background: -webkit-linear-gradient(right, transparent, #000, transparent);
-    background: -moz-linear-gradient(right, transparent, #000, transparent);
-    background: -ms-linear-gradient(right, transparent, #000, transparent);
-    background: -o-linear-gradient(right, transparent, #000, transparent);
+    background: -webkit-linear-gradient(right, transparent, #007AC2, transparent);
+    background: -moz-linear-gradient(right, transparent, #007AC2, transparent);
+    background: -ms-linear-gradient(right, transparent, #007AC2, transparent);
+    background: -o-linear-gradient(right, transparent, #007AC2, transparent);
     bottom: 0;
     content: "";
     height: 1px;
@@ -41,4 +72,8 @@
     position: absolute;
     right: 0;
     width: 100%;
+}
+
+.plus-gradient {
+    @apply bg-linear-to-r from-[#EE322E] to-[#F79431];
 }

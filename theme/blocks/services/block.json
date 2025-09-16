@@ -1,0 +1,27 @@
+{
+    "apiVersion": 2,
+    "name": "acf/services",
+    "title": "Services Listing",
+    "category": "widgets",
+    "icon": "settings",
+    "description": "A custom services listing block",
+    "keywords": [
+        "services",
+        "listing"
+    ],
+    "supports": {
+        "color": true,
+        "align": true,
+        "anchor": true,
+        "jsx": true,
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "index.php"
+    },
+    "style": "file:./style.css"
+}

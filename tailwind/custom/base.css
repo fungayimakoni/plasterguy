@@ -6,21 +6,37 @@
  * This uses the background and foreground colors declared in the `theme.json`
  * file and is applied both to the front end and in the block editor.
  */
+
+:root {
+	--transition: all 0.2s ease-out;
+}
+
 body {
-	@apply bg-background text-foreground font-sans;
+	@apply bg-background text-foreground font-body text-xl;
 }
 
-
-.slick-slide {
-	margin: 0 10px;
+h1 {
+	font-weight: 700;
+	line-height: 1;
 }
 
-.slick-list {
-	margin: 0 -10px;
+h2 {
+	@apply md:text-4xl text-3xl font-extrabold uppercase;
 }
 
-button.slick-arrow.slick-disabled {
-	opacity: .4;
+h3 {
+	font-weight: 600;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+span.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	display: block;
+	background: red;
 }
 
 .scrollToTopBtn {
@@ -43,4 +59,96 @@ button.slick-arrow.slick-disabled {
 .showBtn {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+.autoplay-progress {
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+	z-index: 10;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+	--progress: 0;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	stroke-width: 4px;
+	stroke: var(--swiper-theme-color);
+	fill: none;
+	stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+	stroke-dasharray: 125.6;
+	transform: rotate(-90deg);
+}
+
+.angled-lines:after {
+	content: "";
+	width: 520px;
+	height: 100%;
+	background-image: url(https://info.evaluateenergy.com/wp-content/themes/truemarket/assets/images/svg/angled-lines-c.svg);
+	background-repeat: no-repeat;
+	opacity: .6;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.swiper-scrollbar {
+	background: #f68031;
+}
+
+.swiper-scrollbar {
+	border-radius: 2px;
+	height: 2px !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	display: none;
+}
+
+.aem-carousel-template .aem-carousel-template__slide-image.enable-overlay:after {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(25.57%, rgba(27, 21, 52, 0)), to(#1b1534));
+	background: linear-gradient(180deg, rgba(27, 21, 52, 0) 25.57%, #1b1534);
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0
+}
+
+.menu-item a:before {
+	content: "";
+	height: 5px;
+	width: 5px;
+	display: block;
+	border-radius: 10px;
+	background: transparent;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: color 0.1s ease-in-out, background-color, border-color, box-shadow;
+}
+
+.menu-item a {
+	position: relative;
+}
+
+.menu-item:hover>a:before,
+.current-menu-item a:before {
+	background: red;
 }

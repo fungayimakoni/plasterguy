@@ -45,6 +45,8 @@
 	--font-mono:
 		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
 		"Liberation Mono", "Courier New", monospace;
+	--font-body: "Tajawal";
+	--font-heading: "Tajawal";
 
 	/**
 	 * Add your theme below:

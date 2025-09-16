@@ -19,25 +19,31 @@ get_header();
 				the_post();
 				get_template_part( 'template-parts/content/content', 'single' );
 
-				if ( is_singular( 'post' ) ) {
-					// Previous/next post navigation.
-					the_post_navigation(
-						array(
-							'next_text' => '<span aria-hidden="true">' . __( 'Next Post', 'rwb' ) . '</span> ' .
-								'<span class="sr-only">' . __( 'Next post:', 'rwb' ) . '</span> <br/>' .
-								'<span>%title</span>',
-							'prev_text' => '<span aria-hidden="true">' . __( 'Previous Post', 'rwb' ) . '</span> ' .
-								'<span class="sr-only">' . __( 'Previous post:', 'rwb' ) . '</span> <br/>' .
-								'<span>%title</span>',
-						)
-					);
-				}
+				?>
 
+				<div class="mx-auto max-w-[920px]">
+					<?php
+						if ( is_singular( 'post' ) ) {
+							// Previous/next post navigation.
+							the_post_navigation(
+								array(
+									'next_text' => '<span aria-hidden="true">' . __( 'Next Post', 'rwb' ) . '</span> ' .
+										'<span class="sr-only">' . __( 'Next post:', 'rwb' ) . '</span> <br/>' .
+										'<span>%title</span>',
+									'prev_text' => '<span aria-hidden="true">' . __( 'Previous Post', 'rwb' ) . '</span> ' .
+										'<span class="sr-only">' . __( 'Previous post:', 'rwb' ) . '</span> <br/>' .
+										'<span>%title</span>',
+								)
+							);
+						}
+					?>
+				</div>
+				<?php
 				// If comments are open, or we have at least one comment, load
 				// the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
+				// if ( comments_open() || get_comments_number() ) {
+				// 	comments_template();
+				// }
 
 				// End the loop.
 			endwhile;

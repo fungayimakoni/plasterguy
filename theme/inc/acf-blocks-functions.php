@@ -19,25 +19,25 @@ function rwb_define_block()
             'keywords' => array('fun', 'facts', 'profiles', 'acf'),
         ));
 
-        acf_register_block(array(
-            'name' => 'home-hero',
-            'title' => __('Home Hero'),
-            'description' => __('A custom home page hero block'),
-            'render_callback' => 'rwb_render_home_hero_block',
-            'category' => 'layout',
-            'icon' => 'heading',
-            'keywords' => array('hero', 'acf'),
-        ));
+        // acf_register_block(array(
+        //     'name' => 'home-hero',
+        //     'title' => __('Home Hero'),
+        //     'description' => __('A custom home page hero block'),
+        //     'render_callback' => 'rwb_render_home_hero_block',
+        //     'category' => 'layout',
+        //     'icon' => 'heading',
+        //     'keywords' => array('hero', 'acf'),
+        // ));
 
-        acf_register_block(array(
-            'name' => 'services-listing',
-            'title' => __('Services Listing'),
-            'description' => __('A custom services listing'),
-            'render_callback' => 'rwb_render_services_listing_block',
-            'category' => 'layout',
-            'icon' => 'tools',
-            'keywords' => array('services', 'acf'),
-        ));
+        // acf_register_block(array(
+        //     'name' => 'services-listing',
+        //     'title' => __('Services Listing'),
+        //     'description' => __('A custom services listing'),
+        //     'render_callback' => 'rwb_render_services_listing_block',
+        //     'category' => 'layout',
+        //     'icon' => 'tools',
+        //     'keywords' => array('services', 'acf'),
+        // ));
 
         acf_register_block(array(
             'name' => 'working-process',
@@ -49,35 +49,35 @@ function rwb_define_block()
             'keywords' => array('working', 'process', 'acf'),
         ));
 
-        acf_register_block(array(
-            'name' => 'why-choose',
-            'title' => __('Why choose us'),
-            'description' => __('A custom why choose us'),
-            'render_callback' => 'rwb_render_why_choose_block',
-            'category' => 'layout',
-            'icon' => 'heading',
-            'keywords' => array('why', 'choose', 'acf'),
-        ));
+        // acf_register_block(array(
+        //     'name' => 'why-choose',
+        //     'title' => __('Why choose us'),
+        //     'description' => __('A custom why choose us'),
+        //     'render_callback' => 'rwb_render_why_choose_block',
+        //     'category' => 'layout',
+        //     'icon' => 'heading',
+        //     'keywords' => array('why', 'choose', 'acf'),
+        // ));
 
-        acf_register_block(array(
-            'name' => 'operational-areas',
-            'title' => __('Operational Areas'),
-            'description' => __('Areas we serve'),
-            'render_callback' => 'rwb_render_operational_areas_block',
-            'category' => 'layout',
-            'icon' => 'dashboard',
-            'keywords' => array('operational', 'areas', 'locations', 'acf'),
-        ));
+        // acf_register_block(array(
+        //     'name' => 'operational-areas',
+        //     'title' => __('Operational Areas'),
+        //     'description' => __('Areas we serve'),
+        //     'render_callback' => 'rwb_render_operational_areas_block',
+        //     'category' => 'layout',
+        //     'icon' => 'dashboard',
+        //     'keywords' => array('operational', 'areas', 'locations', 'acf'),
+        // ));
 
-        acf_register_block(array(
-            'name' => 'fullbleed-copy',
-            'title' => __('Full width copy'),
-            'description' => __('Section with copy'),
-            'render_callback' => 'rwb_render_fullbleed_copy_block',
-            'category' => 'layout',
-            'icon' => 'heading',
-            'keywords' => array('full', 'copy', 'acf'),
-        ));
+        // acf_register_block(array(
+        //     'name' => 'fullbleed-copy',
+        //     'title' => __('Full width copy'),
+        //     'description' => __('Section with copy'),
+        //     'render_callback' => 'rwb_render_fullbleed_copy_block',
+        //     'category' => 'layout',
+        //     'icon' => 'heading',
+        //     'keywords' => array('full', 'copy', 'acf'),
+        // ));
 
         acf_register_block(array(
             'name' => 'faqs',
@@ -108,6 +108,16 @@ function rwb_define_block()
             'icon' => 'post',
             'keywords' => array('posts', 'acf'),
         ));
+
+        // acf_register_block(array(
+        //     'name' => 'flex-column',
+        //     'title' => __('Flexible Column'),
+        //     'description' => __('Custom column with image'),
+        //     'render_callback' => 'rwb_render_flexible_column_block',
+        //     'category' => 'layout',
+        //     'icon' => 'post',
+        //     'keywords' => array('flexible', 'column', 'acf'),
+        // ));
     }
 }
 
@@ -121,25 +131,25 @@ function rwb_render_fun_facts_block($block)
     }
 }
 
-function rwb_render_home_hero_block($block)
-{
-    $slug = str_replace('acf/', '', $block['name']);
+// function rwb_render_home_hero_block($block)
+// {
+//     $slug = str_replace('acf/', '', $block['name']);
 
-    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+//     if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
 
-        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
-    }
-}
+//         include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+//     }
+// }
 
-function rwb_render_services_listing_block($block)
-{
-    $slug = str_replace('acf/', '', $block['name']);
+// function rwb_render_services_listing_block($block)
+// {
+//     $slug = str_replace('acf/', '', $block['name']);
 
-    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+//     if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
 
-        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
-    }
-}
+//         include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+//     }
+// }
 
 function rwb_render_working_process_block($block)
 {
@@ -151,35 +161,35 @@ function rwb_render_working_process_block($block)
     }
 }
 
-function rwb_render_why_choose_block($block)
-{
-    $slug = str_replace('acf/', '', $block['name']);
+// function rwb_render_why_choose_block($block)
+// {
+//     $slug = str_replace('acf/', '', $block['name']);
 
-    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+//     if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
 
-        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
-    }
-}
+//         include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+//     }
+// }
 
-function rwb_render_operational_areas_block($block)
-{
-    $slug = str_replace('acf/', '', $block['name']);
+// function rwb_render_operational_areas_block($block)
+// {
+//     $slug = str_replace('acf/', '', $block['name']);
 
-    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+//     if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
 
-        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
-    }
-}
+//         include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+//     }
+// }
 
-function rwb_render_fullbleed_copy_block($block)
-{
-    $slug = str_replace('acf/', '', $block['name']);
+// function rwb_render_fullbleed_copy_block($block)
+// {
+//     $slug = str_replace('acf/', '', $block['name']);
 
-    if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+//     if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
 
-        include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
-    }
-}
+//         include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+//     }
+// }
 
 function rwb_render_faqs_block($block)
 {
@@ -210,3 +220,13 @@ function rwb_render_posts_listing_block($block)
         include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
     }
 }
+
+// function rwb_render_flexible_column_block($block)
+// {
+//     $slug = str_replace('acf/', '', $block['name']);
+
+//     if (file_exists(RWB_PATH . "template-parts/block/content-{$slug}.php")) {
+
+//         include_once(RWB_PATH . "template-parts/block/content-{$slug}.php");
+//     }
+// }
