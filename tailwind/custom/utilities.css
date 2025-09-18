@@ -16,12 +16,12 @@
 }
 
 .rw-button {
-    @apply block py-3 px-4 relative text-white font-bold min-w-[180px] text-center rounded-full bg-linear-to-r from-[#EE322E] to-[#F79431] mt-3 transition-discrete;
+    @apply block py-3 px-4 relative text-white font-bold min-w-[180px] text-center rounded-full mt-3 transition-discrete bg-linear-to-r from-[#EE322E] to-[#EE322E];
     text-decoration: none;
 }
 
 .rw-button:hover {
-    @apply bg-linear-to-r from-[#EE322E] to-[#EE322E];
+    @apply bg-linear-to-r from-[#EE322E] to-[#F79431];
 }
 
 .rw-button__solid {

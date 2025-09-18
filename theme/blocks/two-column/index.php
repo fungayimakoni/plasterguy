@@ -25,7 +25,7 @@
                     <?php endif; ?>
                 </div>
                 
-                <div class="md:w-1/2 <?php echo $swap_image ? 'lg:pr-16' : 'lg:pl-16'; ?>" data-aos="fade-left" data-aos-duration="1000">
+                <div class="md:w-1/2 w-full <?php echo $swap_image ? 'lg:pr-16' : 'lg:pl-16'; ?>" data-aos="fade-left" data-aos-duration="1000">
                     <?php if( get_field( 'fc_section_subtitle' ) ): ?>
                         <?php the_field( 'fc_section_subtitle' ); ?>
                     <?php endif; ?>

@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-	@apply md:text-4xl text-3xl font-extrabold uppercase;
+	@apply text-4xl font-extrabold;
 }
 
 h3 {
@@ -30,6 +30,11 @@ h3 {
 
 p {
 	margin-bottom: 20px;
+}
+
+h1 span,
+h2 span {
+	color: #f31010;
 }
 
 span.swiper-pagination-bullet {
@@ -105,6 +110,13 @@ span.swiper-pagination-bullet {
 	z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+	.angled-lines:after {
+		width: 360px;
+		top: -120px;
+	}
+}
+
 .swiper-scrollbar {
 	background: #f68031;
 }
@@ -151,4 +163,60 @@ span.swiper-pagination-bullet {
 .menu-item:hover>a:before,
 .current-menu-item a:before {
 	background: red;
+}
+
+.with-overlay::before {
+	content: "";
+	background: 100% 0;
+	background-image: linear-gradient(0deg, #000000 0, rgba(20, 61, 145, 0) 60%);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.footer-top::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: .4;
+	background-image: url('../assets/images/stars-home.svg');
+}
+
+:not(#masthead) ul li {
+	position: relative;
+	padding-left: 25px;
+}
+
+ul:not(.main-menu) {
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+ul:not(.main-menu) li:before {
+	background: #f31010;
+	width: 15px;
+	height: 10px;
+}
+
+ul:not(.main-menu) li:before,
+ul:not(.main-menu) li:after {
+	content: '';
+	display: inline;
+	position: absolute;
+	left: 0;
+	top: 8px;
+	transform: translateY(0);
+	border-radius: 10px;
+}
+
+ul:not(.main-menu) li:after {
+	width: 8px;
+	height: 5px;
+	background: #fff;
+	top: 10px;
 }

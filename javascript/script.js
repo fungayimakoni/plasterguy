@@ -86,7 +86,7 @@
         // below listed default settings
         AOS.init({
             // Global settings:
-            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
             startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
             initClassName: 'aos-init',
             animatedClassName: 'aos-animate',
@@ -101,7 +101,7 @@
             delay: 0,
             duration: 400,
             easing: 'ease',
-            once: false,
+            once: true,
             mirror: false,
             anchorPlacement: 'top-bottom',
 
