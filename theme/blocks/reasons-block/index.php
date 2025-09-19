@@ -12,9 +12,10 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                 <div class="md:flex gap-12 justify-between items-center bg-[#08253A]">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/stars-home.svg" alt="" class="absolute left-0 top-0 md:max-w-[140px] max-w-[100px] opacity-65">
                     <div class="md:w-1/2 md:max-w-[660px] ml-auto pl-6 py-12 relative">
-                        <div    data-aos="fade-down"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500">
+                        <div    
+                            data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500">
                             <h2 class="section-ttl"><?php the_field('wc_title'); ?></h2>
                             <p class="mb-4 text-2xl"><?php the_field('wc_description'); ?></p>
                             <?php $wc_section_cta = get_field( 'wc_section_cta' ); ?>
@@ -28,7 +29,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                         <?php $wc_background_image = get_field( 'wc_background_image' ); ?>
                         <?php $size = 'full'; ?>
                         <?php if ( $wc_background_image ) : ?>
-                            <?php echo wp_get_attachment_image( $wc_background_image, $size ); ?>
+                            <?php echo wp_get_attachment_image( $wc_background_image, $size, "", array( "class" => "max-h-[400px] object-cover object-top" ) ); ?>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -42,7 +43,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                             $description = get_sub_field('item_description');
                             $link = get_sub_field('s_cta');
                         ?>
-                            <div class="bg-[#FFF] p-4 border border-[#f31010] rounded-lg flex flex-col gap-4 border-b-6 border-[#f31010] bg-white" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="<?php echo get_row_index() *300 + 300; ?>">
+                            <div class="bg-[#FFF] p-4 border border-[#F0F7FC] rounded-lg flex flex-col gap-4 border-b-6 border-[#F0F7FC] bg-white" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="<?php echo get_row_index() *300 + 300; ?>">
                                 <div class="icon-wrapper w-[60px] mx-auto">
                                     <?php if ( $icon ) : ?>
                                         <img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" width="80" height="60" class="block mt-0 mb-0" />

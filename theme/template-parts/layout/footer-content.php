@@ -10,11 +10,11 @@
 
 ?>
 
-<button class="scrollToTopBtn">☝️</button>
+<button class="scrollToTopBtn">Top</button>
 
 
 <footer id="colophon" class="mt-auto md:ml-8 ml-4">
-	<div class="footer-top relative bg-[#ABB8C3] pt-12 pb-8 mt-12 rounded-tl-[60px] bg-cover bg-no-repeat bg-bottom")>
+	<div class="footer-top relative bg-[#F0F7FC] pt-12 pb-8 mt-12 rounded-tl-[60px] bg-cover bg-no-repeat bg-bottom")>
 		<div class="wrapper">
 			<div class="flex gap-4 lg:flex-nowrap flex-wrap">
 				<div class="md:w-[40%]">
@@ -34,7 +34,7 @@
 	</div>
 
 	<div class="pt-12 bg-[#08253A] text-white">
-		<div class="wrapper border-b flex gap-12">
+		<div class="wrapper border-b border-[#2e4e65] flex gap-12">
 			<div class="pb-6 flex flex-col justify-center">
 				<div class="flex md:flex-row flex-col md:items-center justify-between gap-6">
 					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="block">

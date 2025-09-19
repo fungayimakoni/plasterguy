@@ -37,6 +37,15 @@ h2 span {
 	color: #f31010;
 }
 
+h1 span {
+	display: inline-block;
+}
+
+h1.entry-title:after {
+	content: '.';
+	color: #f31010;
+}
+
 span.swiper-pagination-bullet {
 	width: 10px;
 	height: 10px;
@@ -176,6 +185,10 @@ span.swiper-pagination-bullet {
 	bottom: 0;
 }
 
+.with-overlay:hover:before {
+	background-image: linear-gradient(0deg, #f31010, rgba(20, 61, 145, 0) 60%);
+}
+
 .footer-top::before {
 	content: "";
 	width: 100%;
@@ -219,4 +232,49 @@ ul:not(.main-menu) li:after {
 	height: 5px;
 	background: #fff;
 	top: 10px;
+}
+
+footer ul li:before,
+footer ul li:after {
+	display: none !important;
+}
+
+footer ul li,
+footer ul {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+.autoplay-progress svg {
+	stroke: #f31010;
+}
+
+.autoplay-progress {
+	color: #fff;
+	font-weight: 400;
+	background-image: linear-gradient(0deg, #f31010, rgba(20, 61, 145, 0) 60%);
+	border-radius: 50%;
+}
+
+input,
+textarea {
+	border: 1px solid #042042;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+label {
+	font-size: 18px;
+}
+
+textarea {
+	max-height: 140px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+	border-radius: 0 !important;
+	background-color: #f0f7fc;
+	border-width: 2px;
+	outline: none;
 }

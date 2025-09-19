@@ -17,7 +17,7 @@
 <div id="<?php echo $id; ?>" <?php echo get_block_wrapper_attributes(); ?>>
     <section class="section-padding relative <?php echo $section_divider . ' ' . $show_angled_lines; ?>">
         <div class="wrapper">
-            <div class="flex md:flex-row flex-col md:gap-16 gap-8 items-center <?php echo $flex_direction ? 'md:flex-row-reverse' : ''; ?>">
+            <div class="flex flex-col md:gap-16 gap-8 items-center <?php echo $swap_image ? 'md:flex-row-reverse' : 'md:flex-row'; ?>">
                 <div class="md:w-1/2 <?php echo $swap_image ? 'rounded-br-[60px]' : 'rounded-bl-[60px]'; ?> overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
                     <?php $fc_section_image = get_field( 'fc_section_image' ); ?>
                     <?php if ( $fc_section_image ) : ?>
@@ -42,7 +42,6 @@
                     <?php if ( $fc_section_cta ) : ?>
                         <a href="<?php echo esc_url( $fc_section_cta['url'] ); ?>" target="<?php echo esc_attr( $fc_section_cta['target'] ); ?>" class="rw-button !inline-block"><?php echo esc_html( $fc_section_cta['title'] ); ?></a>
                     <?php endif; ?>
-
                     
                 </div>
             </div>

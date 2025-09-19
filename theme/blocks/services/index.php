@@ -7,7 +7,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 ?>
 
 <div id="<?php echo $id; ?>" <?php echo get_block_wrapper_attributes(); ?>>
-    <section class="bg-[#F0F7FC] section-padding md:ml-8 ml-4 rounded-bl-[60px] bg-no-repeat bg-bottom bg-contain" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/renewable-graphic.svg');">
+    <section class="bg-[#F0F7FC] section-padding md:ml-8 ml-4 rounded-bl-[60px] bg-no-repeat bg-bottom bg-contain pb-[25px]" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/renewable-graphic.svg');">
         <div class="wrapper">
             <?php if (have_rows('services_list')): ?>
                 <div class="flex md:flex-row flex-col gap-8">

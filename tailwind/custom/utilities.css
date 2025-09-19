@@ -15,12 +15,14 @@
     @apply md:py-20 py-12;
 }
 
-.rw-button {
+.rw-button,
+input.wpcf7-form-control.wpcf7-submit {
     @apply block py-3 px-4 relative text-white font-bold min-w-[180px] text-center rounded-full mt-3 transition-discrete bg-linear-to-r from-[#EE322E] to-[#EE322E];
     text-decoration: none;
 }
 
-.rw-button:hover {
+.rw-button:hover,
+input.wpcf7-form-control.wpcf7-submit:hover {
     @apply bg-linear-to-r from-[#EE322E] to-[#F79431];
 }
 
