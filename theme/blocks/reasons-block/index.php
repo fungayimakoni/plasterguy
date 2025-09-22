@@ -7,7 +7,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 ?>
 
 <div id="<?php echo $id; ?>" <?php echo get_block_wrapper_attributes(); ?>>
-    <section class="section-divider relative pb-20" style="background-image: url('<?php the_field('wc_background_image'); ?>')">
+    <section class="section-divider relative md:pb-20 pb-12" style="background-image: url('<?php the_field('wc_background_image'); ?>')">
         <div class="pt-20 relative">
                 <div class="md:flex gap-12 justify-between items-center bg-[#08253A]">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/stars-home.svg" alt="" class="absolute left-0 top-0 md:max-w-[140px] max-w-[100px] opacity-65">

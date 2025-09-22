@@ -6,6 +6,8 @@
 
     if ( get_field( 'section_divider' ) == 1 ) : 
         $section_divider = "section-divider md:px-6";
+    else:
+        $section_divider = "";
     endif;
 
     if ( get_field( 'show_angled_lines' ) == 1 ) : 
@@ -15,7 +17,7 @@
 ?>
 
 <div id="<?php echo $id; ?>" <?php echo get_block_wrapper_attributes(); ?>>
-    <section class="section-padding relative <?php echo $section_divider . ' ' . $show_angled_lines; ?>">
+    <section class="section-padding relative <?php echo get_field( 'show_angled_lines' ) ? 'angled-lines' : ''; ?> <?php echo $section_divider; ?>">
         <div class="wrapper">
             <div class="flex flex-col md:gap-16 gap-8 items-center <?php echo $swap_image ? 'md:flex-row-reverse' : 'md:flex-row'; ?>">
                 <div class="md:w-1/2 <?php echo $swap_image ? 'rounded-br-[60px]' : 'rounded-bl-[60px]'; ?> overflow-hidden" data-aos="fade-right" data-aos-duration="1000">

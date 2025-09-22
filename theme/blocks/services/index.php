@@ -7,7 +7,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 ?>
 
 <div id="<?php echo $id; ?>" <?php echo get_block_wrapper_attributes(); ?>>
-    <section class="bg-[#F0F7FC] section-padding md:ml-8 ml-4 rounded-bl-[60px] bg-no-repeat bg-bottom bg-contain pb-[25px]" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/renewable-graphic.svg');">
+    <section class="bg-gold section-padding md:ml-8 ml-4 rounded-bl-[60px] bg-no-repeat bg-bottom bg-contain pb-[25px]" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/renewable-graphic.svg');">
         <div class="wrapper">
             <?php if (have_rows('services_list')): ?>
                 <div class="flex md:flex-row flex-col gap-8">
@@ -57,7 +57,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
                                 <?php endwhile; ?>
                             </div>
 
-                            <div class="flex justify-between items-center relative mt-6">
+                            <div class="flex justify-between items-center relative mt-6 max-w-[520px]">
                                 <div class="swiper-scrollbar !w-[calc(100%-140px)]"></div>
                                 <div class="flex justify-center gap-4 relative w-[120px] ml-auto">
                                     <div class="swiper-button-prev rounded-full border border-[#f68031] w-[40px] h-[40px] flex items-center justify-center cursor-pointer">
